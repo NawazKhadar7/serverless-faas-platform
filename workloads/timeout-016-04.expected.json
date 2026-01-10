@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "failed": {
+      "equals": 0
+    },
+    "limited": {
+      "equals": 0
+    },
+    "ok": {
+      "equals": 0
+    },
+    "requests": {
+      "equals": 16
+    },
+    "results_correct": {
+      "equals": true
+    },
+    "timeouts": {
+      "equals": 16
+    },
+    "untrusted_code_enabled": {
+      "equals": false
+    },
+    "warm_reuses": {
+      "equals": 0
+    }
+  },
+  "rationale": "Terminate a worker whose sleep handler exceeds its deadline.",
+  "synthetic": true
+}
