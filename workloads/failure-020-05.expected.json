@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "failed": {
+      "equals": 20
+    },
+    "limited": {
+      "equals": 0
+    },
+    "ok": {
+      "equals": 0
+    },
+    "requests": {
+      "equals": 20
+    },
+    "results_correct": {
+      "equals": true
+    },
+    "timeouts": {
+      "equals": 0
+    },
+    "untrusted_code_enabled": {
+      "equals": false
+    },
+    "warm_reuses": {
+      "equals": 19
+    }
+  },
+  "rationale": "Return handler errors without losing request accounting.",
+  "synthetic": true
+}
