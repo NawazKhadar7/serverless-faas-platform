@@ -1,0 +1,32 @@
+{
+  "metrics": {
+    "accounted": true,
+    "failed": 0,
+    "limited": 0,
+    "ok": 4,
+    "requests": 4,
+    "results_correct": true,
+    "timeouts": 0,
+    "untrusted_code_enabled": false,
+    "warm_reuses": 3,
+    "worker_starts": 1
+  },
+  "output": [
+    {
+      "result": 1,
+      "status": "ok"
+    },
+    {
+      "result": 3,
+      "status": "ok"
+    },
+    {
+      "result": 5,
+      "status": "ok"
+    },
+    {
+      "result": 7,
+      "status": "ok"
+    }
+  ]
+}
