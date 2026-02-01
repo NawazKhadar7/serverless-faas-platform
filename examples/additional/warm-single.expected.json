@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "failed": {
+      "equals": 0
+    },
+    "limited": {
+      "equals": 0
+    },
+    "ok": {
+      "equals": 1
+    },
+    "requests": {
+      "equals": 1
+    },
+    "results_correct": {
+      "equals": true
+    },
+    "timeouts": {
+      "equals": 0
+    },
+    "untrusted_code_enabled": {
+      "equals": false
+    },
+    "warm_reuses": {
+      "equals": 0
+    },
+    "worker_starts": {
+      "equals": 1
+    }
+  },
+  "rationale": "One worker starts without warm reuse.",
+  "synthetic": true
+}
