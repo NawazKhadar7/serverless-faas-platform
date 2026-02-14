@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "failed": {
+      "equals": 0
+    },
+    "limited": {
+      "equals": 0
+    },
+    "ok": {
+      "equals": 3
+    },
+    "requests": {
+      "equals": 3
+    },
+    "results_correct": {
+      "equals": true
+    },
+    "timeouts": {
+      "equals": 0
+    },
+    "untrusted_code_enabled": {
+      "equals": false
+    },
+    "warm_reuses": {
+      "equals": 2
+    },
+    "worker_starts": {
+      "equals": 1
+    }
+  },
+  "rationale": "One worker starts and is reused twice.",
+  "synthetic": true
+}
