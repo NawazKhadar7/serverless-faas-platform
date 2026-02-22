@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "failed": {
+      "equals": 0
+    },
+    "limited": {
+      "equals": 4
+    },
+    "ok": {
+      "equals": 4
+    },
+    "requests": {
+      "equals": 8
+    },
+    "results_correct": {
+      "equals": true
+    },
+    "timeouts": {
+      "equals": 0
+    },
+    "untrusted_code_enabled": {
+      "equals": false
+    },
+    "warm_reuses": {
+      "equals": 3
+    }
+  },
+  "rationale": "Reject requests beyond the tenant admission quota.",
+  "synthetic": true
+}
