@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "failed": {
+      "equals": 0
+    },
+    "limited": {
+      "equals": 0
+    },
+    "ok": {
+      "equals": 0
+    },
+    "requests": {
+      "equals": 1
+    },
+    "results_correct": {
+      "equals": true
+    },
+    "timeouts": {
+      "equals": 1
+    },
+    "untrusted_code_enabled": {
+      "equals": false
+    },
+    "warm_reuses": {
+      "equals": 0
+    },
+    "worker_starts": {
+      "equals": 1
+    }
+  },
+  "rationale": "The worker is retired after the request times out.",
+  "synthetic": true
+}
