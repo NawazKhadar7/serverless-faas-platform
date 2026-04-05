@@ -1,0 +1,47 @@
+{
+  "algorithm": "Map tenants to reusable child processes. Admission happens before startup. Parent uses a pipe with a deadline; timeout retires and kills the worker. Warm requests reuse a process, while cold mode retires after each request. Wasmtime uses fuel with no WASI/host imports. Reference: https://bytecodealliance.github.io/wasmtime-py/ .",
+  "architecture": "Workload API \u2192 tenant admission \u2192 bounded scheduler \u2192 dedicated process pipe \u2192 validated handler \u2192 result. Optional WebAssembly module is a separate execution backend helper.",
+  "data_model": "Request = tenant, registered function, validated JSON payload. Response = status and result/error. Metrics reconcile successful, limited, timed-out and failed requests.",
+  "description": "A local trusted-handler execution platform with per-tenant process reuse, quotas, failure responses and enforced deadlines.",
+  "design": "Separate user identity, quotas and worker state. Never eval user strings. An untrusted platform needs an audited runtime with OS resource limits and syscall isolation; that boundary is not represented by Python processes.",
+  "families": [
+    "warm",
+    "cold",
+    "quota",
+    "timeout",
+    "failure",
+    "tenants"
+  ],
+  "family_notes": [
+    "Reuse one worker for repeat requests.",
+    "Create and retire a process for each cold request.",
+    "Reject requests beyond the tenant admission quota.",
+    "Terminate a worker whose sleep handler exceeds its deadline.",
+    "Return handler errors without losing request accounting.",
+    "Keep reusable workers separate for two tenants."
+  ],
+  "file_count": 165,
+  "limitations": "Default Python workers run trusted registered functions only; process separation is NOT an untrusted-code sandbox. No arbitrary snippets, Firecracker, containerd, cloud deployment or millisecond cold-start guarantee. Requests are sequential in workloads, and quotas are lifetime-per-experiment rather than rate windows. Wasmtime optional path is unexecuted because the dependency is unavailable.",
+  "numpy": false,
+  "operations": "Close the scheduler to retire workers. Deploy only predefined trusted handlers by default. Optional Wasmtime requires installing wasmtime and separately reviewing runtime/module limits.",
+  "scope": "Multiprocessing worker pool, predefined validated handlers, tenant-owned reuse, bounded process count, admission quotas, wall-clock deadlines with termination, and optional import-free Wasmtime add module with fuel and memory limits.",
+  "security": "Do not submit or execute untrusted Python code. The registered handlers are fixed and validated. Process separation is operational isolation only; a hosted untrusted service requires an audited sandbox and OS limits.",
+  "sizes": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24
+  ],
+  "slug": "serverless-faas-platform",
+  "title": "Multi-Tenant Serverless FaaS Platform",
+  "topics": [
+    "serverless",
+    "faas",
+    "multiprocessing",
+    "wasmtime",
+    "systems"
+  ],
+  "workload_count": 36
+}
