@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "accounted": {
+      "equals": true
+    },
+    "failed": {
+      "equals": 0
+    },
+    "limited": {
+      "equals": 0
+    },
+    "ok": {
+      "equals": 8
+    },
+    "requests": {
+      "equals": 8
+    },
+    "results_correct": {
+      "equals": true
+    },
+    "timeouts": {
+      "equals": 0
+    },
+    "untrusted_code_enabled": {
+      "equals": false
+    },
+    "warm_reuses": {
+      "equals": 6
+    }
+  },
+  "rationale": "Keep reusable workers separate for two tenants.",
+  "synthetic": true
+}
